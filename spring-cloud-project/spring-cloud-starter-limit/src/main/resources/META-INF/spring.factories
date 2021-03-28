@@ -1,0 +1,2 @@
+org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker=\
+  com.lcydream.open.config.LimitCircuitBreakerConfiguration

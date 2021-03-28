@@ -1,0 +1,25 @@
+server:
+  port: 56789
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: gateWay-service
+          uri: http://localhost:8888
+          predicates:
+            - Method=GET
+            - Path=/gateway/say
+          filters:
+            - name: Hystrix
+              args:
+                name: gatewayHystrix
+                fallbackUri: forward:/fallback
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+hystrix.command.gatewayHystrix.execution.isolation.thread.timeoutInMilliseconds: 100
+#gatewayHystrix 对应filters里面的参数名称
