@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>21</java.version>
+        <lombok.version>1.18.32</lombok.version>
     </properties>
 
     <groupId>com.lcydream.open</groupId>
@@ -46,6 +47,15 @@
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <!--<annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>-->
                 </configuration>
             </plugin>
         </plugins>
