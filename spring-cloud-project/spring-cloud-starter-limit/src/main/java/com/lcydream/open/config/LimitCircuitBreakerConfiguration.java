@@ -5,7 +5,6 @@ import com.lcydream.open.aop.sub.DefaultCircuitBreakerAspect;
 import org.apache.catalina.core.ApplicationContext;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.actuator.HasFeatures;
 import org.springframework.cloud.client.actuator.NamedFeature;
