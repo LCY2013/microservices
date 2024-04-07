@@ -33,6 +33,16 @@
     </modules>
 
     <build>
+        <!-- Maven 来在构建过程中替换这些占位符 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.java</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
